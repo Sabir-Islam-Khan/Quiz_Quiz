@@ -19,6 +19,7 @@ import java.util.Random;
 public class questionActivity extends AppCompatActivity {
 
 
+// Declare member variables
     TextView displayQuestion,crntScore;
     ProgressBar progress;
     Button trueBtn,falseBtn;
@@ -26,6 +27,7 @@ public class questionActivity extends AppCompatActivity {
     int question;
     int PROGRESS_BAR_INCREMENT = (int) Math.ceil(100/26);
 
+    // Creates question bank arrays
     TrueFalse[] nationalQuestionBank = new TrueFalse[]{
             new TrueFalse(R.string.National1,true),
             new TrueFalse(R.string.National2,false),
@@ -201,13 +203,14 @@ public class questionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
 
-
+    // Links the variables to the layout
         trueBtn = findViewById(R.id.trueBtn);
         falseBtn = findViewById(R.id.falseBtn);
         displayQuestion = findViewById(R.id.question);
         crntScore = findViewById(R.id.score);
         progress = findViewById(R.id.progressBar);
 
+    // Determines the user choice
         String choice = getIntent().getStringExtra("chosenSet");
         String choosedNational = "National";
         String choosedInternational = "International";
@@ -215,6 +218,8 @@ public class questionActivity extends AppCompatActivity {
         String choosedGeography = "Geography";
         String choosedHistory = "History";
 
+
+        // Calls function for question update and answer checking according to user choice
            if(choice.equals(choosedNational)){
                trueBtn.setOnClickListener(new View.OnClickListener() {
                    @Override
@@ -333,6 +338,8 @@ public class questionActivity extends AppCompatActivity {
 
     }
 
+
+    // Method to check answer
     private void nationalCheckAnswer(boolean givenAnswer){
             boolean correctAnswer = nationalQuestionBank[index].getAnswer();
 
@@ -348,6 +355,8 @@ public class questionActivity extends AppCompatActivity {
             }
     }
 
+
+    // Method for updating questions and everything else
     private void nationalUpdateQuestion(){
         index = (index + 1 ) % nationalQuestionBank.length;
         question = nationalQuestionBank[index].getQuestionID();
@@ -371,6 +380,8 @@ public class questionActivity extends AppCompatActivity {
             myAlert.show();
         }
     }
+
+    // same as before for different Question Banks
 
     private void internationalCheckAnswer(boolean givenAnswer){
         boolean correctAnswer = internationalQuestionBank[index].getAnswer();
@@ -491,6 +502,8 @@ public class questionActivity extends AppCompatActivity {
         }
     }
 
+
+    // YEAH ! All done
 
 
     private void HistoryCheckAnswer(boolean givenAnswer){

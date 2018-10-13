@@ -16,13 +16,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-        final Button nationalBtn = findViewById(R.id.nationalChoice);
+        // Creates and links buttons to the layout
+        Button nationalBtn = findViewById(R.id.nationalChoice);
         Button internationalBtn = findViewById(R.id.internationalChoice);
         Button  techBtn = findViewById(R.id.techChoice);
         Button geographyBtn = findViewById(R.id.geographyChoice);
         Button historyBtn = findViewById(R.id.historyChoice);
 
+
+        // Pass variable with different values to QuestionActivity according to which button was pressed
         nationalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,5 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+
+        // The Main part is in QuestionActivity - Check that out !
 
 }
