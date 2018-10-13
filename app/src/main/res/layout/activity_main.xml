@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffda79"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="416dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="#ffda79"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/nationalChoice"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:background="#e74c3c"
+            android:text="@string/nationalChoice"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/internationalChoice"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:background="#3498db"
+            android:text="@string/internationalChoice"
+            android:textAllCaps="true"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/techChoice"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:background="#273c75"
+            android:text="@string/gkChoice"
+            android:textAllCaps="true"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/geographyChoice"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:background="#e1b12c"
+            android:text="@string/geographyChoice"
+            android:textAllCaps="true"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/historyChoice"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:background="#44bd32"
+            android:text="@string/historyChoice"
+            android:textAllCaps="true"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
